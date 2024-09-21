@@ -18,7 +18,7 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <h1 class="text-center mb-4 fw-bolder display-4 text-primary font-weight-bold">Image Uploader</h1>
-              <form action="/uploader/upload/" method="post" enctype="multipart/form-data">
+              <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %} <!-- CSRF protection -->
                 <div class="mb-3">
                   {{ form.as_p }} <!-- Assumes the form is being rendered with Django -->
